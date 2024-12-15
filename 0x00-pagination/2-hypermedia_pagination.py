@@ -51,6 +51,7 @@ class Server:
         return (data[start_index:end_index])
 
     def get_hyper(self, page: int = 1, page_size: int = 10) -> dict:
+        ''' returns a dictionary containing the following key-value pairs:'''
         data = self.get_page(page, page_size)
         start, end = index_range(page, page_size)
         total_items = len(self.dataset())
